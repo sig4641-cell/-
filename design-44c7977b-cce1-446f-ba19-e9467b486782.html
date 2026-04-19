@@ -1,0 +1,164 @@
+<html lang="ko" vid="0"><head vid="1">
+    <meta charset="UTF-8" vid="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">혈당걱정없는면</title>
+    <style vid="5">
+        :root {
+            --bg: #0D0D0D;
+            --fg: #FFFFFF;
+            --muted: #666666;
+            --accent: #E8D5B7;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            color: var(--muted);
+            max-width: 600px;
+            line-height: 1.8;
+            margin-bottom: 60px;
+        }
+
+        .noodle-image {
+            width: 100%;
+            max-width: 700px;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 60px;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+
+        .noodle-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(232, 213, 183, 0.1) 0%, transparent 70%);
+            z-index: 1;
+        }
+
+        .noodle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7) contrast(1.1) saturate(0.8);
+        }
+
+        .order-btn {
+            display: inline-block;
+            background: var(--fg);
+            color: var(--bg);
+            padding: 20px 48px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .order-btn:hover {
+            transform: scale(1.05) translateY(-2px);
+            background: var(--accent);
+            color: var(--bg);
+            box-shadow: 0 10px 30px rgba(232, 213, 183, 0.3);
+        }
+
+        .order-btn:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+            50% { box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0); }
+        }
+
+        @keyframes subtle-shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            75% { transform: translateX(2px); }
+        }
+
+        .order-btn:hover {
+            animation: pulse 1.5s ease-in-out infinite, subtle-shake 0.3s ease-in-out;
+        }
+
+        .glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(232, 213, 183, 0.05) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .noodle-image {
+                height: 280px;
+            }
+            .order-btn {
+                padding: 18px 36px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body vid="6">
+
+    <div class="glow" vid="7"></div>
+
+    <div class="container" vid="8">
+        <h1 class="title" vid="9">먹고 싶은 면 요리,<br vid="10">이제 참지 않아도 됩니다.</h1>
+        <p class="subtitle" vid="11">식후 혈당 수치 때문에 좋아하던 국수와 파스타를 멀리하셨나요?<br vid="12">불안함은 덜어내고, 오직 맛있는 식사의 즐거움만 남겼습니다.</p>
+        
+        <div class="noodle-image" vid="13">
+            <img src="https://images.pexels.com/photos/4552990/pexels-photo-4552990.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="신비로운 쌀면" vid="14">
+        </div>
+
+        <a href="https://naver.me/5B06sSx1" class="order-btn" vid="15">[ 혈당 걱정 없는 면, 출시 알림 받기 ]</a>
+        <p style="margin-top: 24px; font-size: 14px; color: var(--muted);" vid="16">2026년 물량은 한정물량으로 진행됩니다.</p>
+    </div>
+
+</body></html>
